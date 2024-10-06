@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Style Scrollable Mega Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div id="overlay"></div>
+
+<div id="closeBtn" onclick="closeNav()">&times;</div>
+<div class="sitenav" id="mysiteNav">
+    <div class="sitenavHeader" style="font-size: 19px;">
+        <i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp; Hello, sign in
+    </div>
+
+    <div id="main-container">
+        <div class="sitenavContentHeader">Digital Content & Devices</div>
+        <a href="#" onclick="openSubMenu('submenu-music')">
+            <div class="sitenavRow">
+              <div>Amazon Music</div>
+              <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+            </div>
+        </a>
+
+        <a href="#" onclick="openSubMenu('submenu-kindle')">
+            <div class="sitenavRow">
+              <div>Kindle E-readers & Books</div>
+              <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+            </div>
+        </a>
+
+        <a href="#" onclick="openSubMenu('submenu-appstore')">
+            <div class="sitenavRow">
+              <div>Amazon Appstore</div>
+              <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+            </div>
+        </a>
+
+         <a href="#" onclick="openSubMenu('submenu-appstore')">
+            <div class="sitenavRow">
+              <div>Book</div>
+              <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+            </div>
+        </a>
+
+         <a href="#" onclick="openSubMenu('submenu-appstore')">
+            <div class="sitenavRow">
+              <div>Phone</div>
+              <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+            </div>
+        </a>
+        <hr>
+
+        <div class="sitenavContentHeader">Shop by Department</div>
+        <a href="#" onclick="openSubMenu('submenu-electronics')">
+            <div class="sitenavRow">
+              <div>Electronics</div>
+              <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+            </div>
+        </a>
+
+        <a href="#" onclick="openSubMenu('submenu-computers')">
+            <div class="sitenavRow">
+              <div>Computers</div>
+              <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+            </div>
+        </a>
+
+        <a href="#" onclick="openSubMenu('submenu-smart')">
+            <div class="sitenavRow">
+              <div>Smart Home</div>
+              <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+            </div>
+        </a>
+        <hr>
+
+        <!-- First container for Laptops -->
+        <div class="sietnavContainer" id="firstContainer">
+            <a href="#">
+                <div class="sitenavRow">
+                  <div>Dell</div>
+                  <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+                </div>
+            </a> 
+
+            <a href="#">
+                <div class="sitenavRow">
+                  <div>HP</div>
+                  <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+                </div>
+            </a>
+             <a href="#">
+                <div class="sitenavRow">
+                  <div>Lenevo</div>
+                  <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+                </div>
+            </a>
+             <a href="#">
+                <div class="sitenavRow">
+                  <div>Mac</div>
+                  <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+                </div>
+            </a> 
+
+            <a href="#">
+                <div class="sitenavRow">
+                  <div>Walton</div>
+                  <i class="fa fa-chevron-right" style="color:#8e9090;" aria-hidden="true"></i>
+                </div>
+            </a>
+            <!-- Additional items for the firstContainer can go here -->
+        </div>
+
+        <!-- Dropdown section for laptops -->
+        <div class="sitenavRowDropdown" id="firstDropdown" onclick="firstDropdown()">
+            <div style="color:#4D4E4E;">See All</div>
+            <i class="fa fa-chevron-down" style="color:#8e9090; margin-left: 10px;" aria-hidden="true"></i>
+        </div><br><br>
+        <hr>
+    </div>
+</div>
+
+<!-- ================Submenus ================-->
+<!-- Submenu for Amazon Music -->
+<div id="submenu-music" class="submenu">
+      <div class="sitenavHeader" style="font-size: 19px;">
+        <i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp; Hello, sign in
+    </div>
+
+    <div class="submenu-header" onclick="closeSubMenu('submenu-music')">
+        <i class="fa fa-arrow-left"></i>Main Menu
+    </div>
+     <div class="sitenavRow">
+        <h3>Stream Music</h3> 
+    </div>
+    
+   <div class="sitenavRowText">
+        <div class="sitenavRow">
+        Music Unlimited
+    </div>
+    <div class="sitenavRow">
+        Prime Music
+    </div>
+      <div class="sitenavRow">
+        Music Unlimited
+    </div>
+    <div class="sitenavRow">
+        Prime Music
+    </div>
+      <div class="sitenavRow">
+        Music Unlimited
+    </div>
+    <div class="sitenavRow">
+        Prime Music
+    </div>
+      <div class="sitenavRow">
+        Music Unlimited
+    </div>
+    <div class="sitenavRow">
+        Prime Music
+    </div>
+      <div class="sitenavRow">
+        Music Unlimited
+    </div>
+    <div class="sitenavRow">
+        Prime Music
+    </div>
+      <div class="sitenavRow">
+        Music Unlimited
+    </div>
+    <div class="sitenavRow">
+        Prime Music
+    </div>
+      <div class="sitenavRow">
+        Music Unlimited
+    </div>
+    <div class="sitenavRow">
+        Prime Music
+    </div>
+      <div class="sitenavRow">
+        Music Unlimited
+    </div>
+    <div class="sitenavRow">
+        Prime Music
+    </div>
+      <div class="sitenavRow">
+        Music Unlimited
+    </div>
+    <div class="sitenavRow">
+        Prime Music
+    </div>
+   </div>
+</div>
+
+<!-- Submenu for Kindle -->
+<div id="submenu-kindle" class="submenu">
+      <div class="sitenavHeader" style="font-size: 19px;">
+        <i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp; Hello, sign in
+    </div>
+    <div class="submenu-header" onclick="closeSubMenu('submenu-kindle')">
+        <i class="fa fa-arrow-left"></i>Main Menu
+    </div>
+    <div class="sitenavRow">
+        <h3>Stream Music</h3> 
+    </div>
+
+    <div class="sitenavRowText">
+        <div class="sitenavRow">
+            E-Books
+        </div>
+        <div class="sitenavRow">
+            Audible Audiobooks
+        </div>
+    </div>
+   
+</div>
+
+<!-- Submenu for Kindle -->
+<div id="submenu-appstore" class="submenu">
+     <div class="sitenavHeader" style="font-size: 19px;">
+        <i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp; Hello, sign in
+    </div>
+    <div class="submenu-header" onclick="closeSubMenu('submenu-appstore')">
+        <i class="fa fa-arrow-left"></i>Main Menu
+    </div>
+    <div class="sitenavRow">
+        <h3>Stream Music</h3> 
+    </div>
+
+     <div class="sitenavRowText">
+        <div class="sitenavRow">
+            E-Books
+        </div>
+        <div class="sitenavRow">
+            Audible Audiobooks
+        </div>
+    </div>
+</div>
+
+<!-- Submenu for Electronics -->
+<div id="submenu-electronics" class="submenu">
+     <div class="sitenavHeader" style="font-size: 19px;">
+        <i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp; Hello, sign in
+    </div>
+    <div class="submenu-header" onclick="closeSubMenu('submenu-electronics')">
+        <i class="fa fa-arrow-left"></i>Main Menu
+    </div>
+    <div class="sitenavRow">
+        <h3>Stream Music</h3> 
+    </div>
+   <div class="sitenavRowText">
+    <div class="sitenavRow">
+        Cameras
+    </div>
+    <div class="sitenavRow">
+        Audio & Headphones
+    </div>
+   </div>
+</div>
+
+<!-- Submenu for Computers -->
+<div id="submenu-computers" class="submenu">
+    
+    <div class="sitenavHeader" style="font-size: 19px;">
+        <i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp; Hello, sign in
+    </div>
+
+    <div class="submenu-header" onclick="closeSubMenu('submenu-computers')">
+        <i class="fa fa-arrow-left"></i>Main Menu
+    </div>
+
+    <div class="sitenavRow">
+        <h3>Stream Music</h3> 
+    </div>
+     <div class="sitenavRowText">
+        <div class="sitenavRow">
+            Laptops
+        </div>
+        <div class="sitenavRow">
+            Desktops
+        </div>
+    </div>
+</div>
+
+<!-- Submenu for Computers -->
+<div id="submenu-smart" class="submenu">
+    <div class="sitenavHeader" style="font-size: 19px;">
+        <i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp; Hello, sign in
+    </div>
+    <div class="submenu-header" onclick="closeSubMenu('submenu-smart')">
+        <i class="fa fa-arrow-left"></i>Main Menu
+    </div>
+
+    <div class="sitenavRow">
+        <h3>Stream Music</h3> 
+    </div>
+
+    <div class="sitenavRowText">
+        <div class="sitenavRow">
+            Laptops
+        </div>
+        <div class="sitenavRow">
+            Desktops
+        </div>
+    </div>
+</div>
+
+<!-- Trigger to open the main menu -->
+<div onclick="openNav()" 
+style="font-size: 30px;
+ margin:20px 0 0 20px;
+  cursor: pointer; 
+  display: inline-block;
+
+  ">
+    &#9776; <b>All</b>
+</div>
+
+<script type="text/javascript" src="scripts.js"></script>
+
+</body>
+</html>

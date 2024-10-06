@@ -1,0 +1,258 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*Navbar Style*/
+
+.sitenav{
+	max-width: 300px;
+	width: 85%;
+	overflow: hidden;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+	top:0;
+	left:0;
+	background-color: #fff;
+	transform-origin: left center;
+	transform: translateX(-380px);
+}
+.sitenavHeader{
+	color:white;
+	font-weight: bold;
+	background-color: rgb(35,47,62);
+	padding: 10px 0px 10px 30px;
+	font-size: 23px;
+}
+
+.sitenavContentHeader{
+	margin-top: 5px;
+	padding: 15px 0px 15px 25px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.sitenavContent{
+padding: 15px 0px 15px 25px;
+}
+.sitenavContent:hover{
+	background-color: #eaeded;
+}
+hr{
+	height: 1px;
+	border: 0;
+	color: gray;
+	background-color: gray;
+	margin: 15px auto 10px auto;
+}
+.sitenavRow{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 15px 25px 15px 25px;
+}
+.sitenavRow:hover{
+	background-color: #eaeded;
+}
+
+.sitenavRow:hover i{
+	color:#111111 !important;
+}
+
+#closeBtn{
+	display: none;
+	position: absolute;
+	top: 0;
+	left:0;
+	margin-left: 310px;
+	color:#fff;
+	font-size: 50px;
+	cursor: pointer;
+	z-index: 75;
+	transform: translateY(-3px);
+	transition: visibility 0.5s;
+}
+
+a, a:link, a:visited, a:hover, a:active{
+	text-decoration: none;
+	color:black;
+}
+
+/*animation*/
+
+@keyframes collapse{
+	0%{
+		z-index: 100;
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(-380px);
+	}
+}
+
+
+@keyframes expand{
+	0%{
+		z-index: 100;
+		transform: translateX(-380px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+
+@keyframes show{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes hide{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+/*overlay style*/
+#overlay{
+	display: none;
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+	background-color: rgba(0,0,0,0.7);
+}
+
+/*dropdown*/
+.sietnavContainer hr{
+	width: 85%;
+}
+.sitenavRowDropdown{
+	display: flex;
+	width: 100%;
+	justify-content: start;
+	align-items: center;
+	padding: 15px 25px 15px 25px;
+	cursor: pointer;
+}
+
+.sitenavRowDropdown:hover{
+	background-color: #eaeded;
+}
+.sitenavRowDropdown:hover i{
+	color:#111111 !important;
+}
+
+#firstContainer{
+	display: none;
+	height: 0px;
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: center top; 
+}
+
+@keyframes expandDropdown{
+	0%{
+		transform: scaleY(0);
+		opacity: 0;
+	}
+
+	100%{
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}
+
+@keyframes collapseDropdown{
+	0%{
+		transform: scaleY(1);
+		opacity: 1;
+	}
+
+	100%{
+		transform: scaleY(0);
+		opacity: 0;
+	}
+}
+
+/*main container style*/
+#main-container{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+
+
+/* Submenu  Styling */
+.submenu {
+    width: 300px;
+    background: #fff;
+    overflow-y: auto;  /* Enables scrolling if the content exceeds the view height */
+    overflow-x: hidden; /* Disables horizontal scrolling from bottom*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    z-index: 10000;
+    display: none;  
+    transform: translateX(0px);
+}
+
+/* Header for Submenu with Back Arrow */
+.submenu-header {
+    padding: 15px;
+    background-color: #f3f3f3;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.submenu-header:hover {
+    background-color: #ddd;
+}
+
+/* Add a little spacing for the back arrow */
+.submenu-header i {
+    margin-right: 10px;
+}
+
+/* General styling for submenu items */
+.submenu .sitenavRow {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+   
+}
+
+.submenu .sitenavRow  h3{
+	cursor: default;
+}
+
+.sitenavRowText{
+	 color:#4D4E4E;
+}
+
+#main-container .sitenavRow{
+	color:#4D4E4E;
+}
+
+.submenu .sitenavRow:hover {
+    background-color: #f3f3f3;
+}
